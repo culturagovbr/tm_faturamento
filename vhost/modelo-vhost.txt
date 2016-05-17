@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    SetEnv APPLICATION_ENV development
+    ServerAdmin alysson.oliveira@cultura.gov.br
+	DocumentRoot "C:/xampp/htdocs/tm_faturamento"
+    ServerName dev.tm_faturamento.com.br    
+	<Directory "C:/xampp/htdocs/tm_faturamento">
+    Order allow,deny
+    Allow from all
+  </Directory>
+    ErrorLog "logs/dev.tm_faturamento.com.br_error.log"
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel info
+    CustomLog "logs/dev.tm_faturamento.com.br_access.log" combined
+</VirtualHost>
